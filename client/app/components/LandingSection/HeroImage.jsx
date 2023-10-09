@@ -1,3 +1,5 @@
+//image from storyset
+
 export default function HeroImage() {
   return (
     <section className="grid">
