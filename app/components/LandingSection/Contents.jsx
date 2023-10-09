@@ -6,7 +6,7 @@ export default function Contents() {
       <h1 className="text-4xl font-bold text-purple-500">PDF Extractor</h1>
       <p className="text-gray-400">
         A PDF page extractor tool that lets you choose specific pages from a PDF
-        file and create a new PDF document with just those selected pages.
+        file and create a new PDF document without those selected pages.
       </p>
       <FileInput />
     </section>

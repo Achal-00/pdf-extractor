@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { PDFDocument } from "pdf-lib";
 import { useEffect, useState } from "react";
+import { Tooltip } from "react-tooltip";
 import { toast } from "sonner";
 
 export default function Home() {
@@ -94,8 +95,15 @@ export default function Home() {
         <input
           type="text"
           onChange={(e) => setPages(e.currentTarget.value)}
-          className="user-page bg-gray-100 rounded-md placeholder:text-sm pl-2 outline-none"
+          className="user-page bg-gray-100 rounded-md placeholder:text-sm pl-2 outline-none text-gray-400"
           placeholder="Page numbers to exclude"
+          data-tooltip-id="page-input"
+        />
+        <Tooltip
+          id="page-input"
+          place="bottom"
+          content="Enter page number's in comma seprated way. eg: 1,2,3"
+          variant="warning"
         />
         <button
           className="bg-purple-500 text-white rounded-md py-2.5 font-medium hover:bg-purple-400"
